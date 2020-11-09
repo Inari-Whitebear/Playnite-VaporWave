@@ -9,5 +9,6 @@
     <Style TargetType="{x:Type Popup}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="AllowsTransparency" Value="True" />
+
     </Style>
 </ResourceDictionary>

@@ -9,7 +9,7 @@
     <Style TargetType="{x:Type ProgressBar}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Foreground" Value="{DynamicResource HoverBrush}"/>
-        <Setter Property="Background" Value="{DynamicResource NormalBrushDark}"/>
+        <Setter Property="Background" Value="{DynamicResource NormalBrushLight}"/>
         <Setter Property="BorderThickness" Value="{DynamicResource ControlBorderThickness}"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -18,12 +18,12 @@
                             CornerRadius="{DynamicResource ControlCornerRadius}">
                         <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                             <Rectangle Fill="{TemplateBinding Background}" />
-                            <Rectangle Name="PART_Track" Margin="0" />
+                            <Rectangle Name="PART_Track" Margin="0" Fill="{DynamicResource HoverBrush}" />
                             <Decorator x:Name="PART_Indicator" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                 <Grid>
                                     <Rectangle Fill="{TemplateBinding Foreground}" />
                                     <Grid x:Name="Animation" Visibility="Hidden">
-                                        <Rectangle Fill="{TemplateBinding Background}" Margin="0,0,50,0">
+                                        <Rectangle Margin="0,0,50,0">
                                             <Rectangle.RenderTransform>
                                                 <ScaleTransform x:Name="HiderPreTransform" ScaleX="0"/>
                                             </Rectangle.RenderTransform>
